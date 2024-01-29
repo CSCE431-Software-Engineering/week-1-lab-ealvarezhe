@@ -1,0 +1,12 @@
+<h1>Delete <%= @book.title %>?</h1>
+<p style="color: green"><%= notice %></p>
+
+<p> Are you sure you want to delete this book? </p>
+
+<div>
+  <%= button_to "Yes", @book, method: :delete, form: { style: "display: inline;"} %>
+  <%= button_to "No", books_path, method: :get, form: { style: "display: inline;"}%>
+</div>
+</br>
+
+<%= link_to "Back to books", books_path %>
